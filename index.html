@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Amader Seba | সেবাই মূল লক্ষ্য</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-brand"><i class="fas fa-hand-holding-heart"></i> Amader Seba</div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    <div class="nav-links" id="navLinks">
+      <button id="homeBtn" class="nav-btn"><i class="fas fa-home"></i> হোম</button>
+      <button id="myOrdersBtn" class="nav-btn"><i class="fas fa-list"></i> সব অর্ডার</button>
+      <button id="adminPanelBtn" class="nav-btn" style="display:none;"><i class="fas fa-user-shield"></i> অ্যাডমিন</button>
+      <button id="loginBtn" class="nav-btn"><i class="fas fa-sign-in-alt"></i> লগইন</button>
+      <button id="registerBtn" class="nav-btn"><i class="fas fa-user-plus"></i> রেজিস্টার</button>
+      <button id="logoutBtn" class="nav-btn" style="display:none;">লগআউট</button>
+      <span id="userGreet" class="user-greet"></span>
+    </div>
+  </nav>
+  <div class="sub-nav">
+    <button class="sub-btn" data-action="home"><i class="fas fa-home"></i> হোম</button>
+    <button class="sub-btn" data-action="login"><i class="fas fa-sign-in-alt"></i> লগইন</button>
+    <button class="sub-btn" data-action="register"><i class="fas fa-user-plus"></i> রেজিস্টার</button>
+    <button class="sub-btn" data-action="contact"><i class="fab fa-facebook"></i> যোগাযোগ</button>
+  </div>
+  <div id="noticeBanner" class="notice-banner" style="display:none;"></div>
+  <main id="app" class="container"></main>
+  <div id="toast" class="toast"></div>
+  <div id="loadingSpinner" class="loading-spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i></div>
+  <div id="modal" class="modal"><div class="modal-content"><span class="modal-close">&times;</span><div class="modal-body" id="modalBody"></div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
