@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Amader Seba | আমাদের সেবা পোর্টাল</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Hind Siliguri', 'Inter', sans-serif; }
+    body { background: #f8fafc; }
+    @keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in { animation: fade-in 0.2s ease-out; }
+    @keyframes slide-up { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translate(-50%, 0); } }
+    .animate-slide-up { animation: slide-up 0.2s ease-out; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .animate-spin { animation: spin 1s linear infinite; }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .btn-pulse { animation: pulse 0.5s ease; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb { background: #0a2e1f; border-radius: 10px; }
+    .service-card { background: #0b3c29; border-radius: 0.75rem; padding: 1rem; text-align: center; cursor: pointer; transition: all 0.2s ease; min-height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(16, 185, 129, 0.2); position: relative; }
+    .service-card:hover { background: #0d4e35; transform: translateY(-2px); border-color: #10b981; }
+    .service-card.selected { background: #1e40af; border-color: #3b82f6; box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+    .service-card .check-mark { position: absolute; top: 6px; right: 6px; background: #10b981; border-radius: 9999px; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold; }
+    .service-card-icon { width: 2.5rem; height: 2.5rem; background: #12553b; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem; color: #a7f3d0; font-size: 1.5rem; }
+    .service-card-title { font-weight: 800; font-size: 0.875rem; color: white; text-align: center; }
+    @media (min-width: 640px) { .service-card { padding: 1.25rem; min-height: 130px; } .service-card-title { font-size: 1rem; } }
+    .order-table { width: 100%; border-collapse: collapse; }
+    .order-table th { background: #0a2e1f; color: white; font-weight: bold; padding: 0.75rem; text-align: left; }
+    .order-table td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; }
+    .order-table tr:hover { background: #f1f5f9; }
+    .badge-pending { background: #fef3c7; color: #d97706; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold; display: inline-block; }
+    .badge-delivered { background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold; display: inline-block; }
+    .badge-cancelled { background: #fee2e2; color: #dc2626; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold; display: inline-block; }
+    @keyframes checkBounce { 0% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); } 100% { transform: scale(1); opacity: 1; } }
+    .check-animation { animation: checkBounce 0.4s ease-out; }
+    @keyframes loginSuccess { 0% { transform: scale(1); } 50% { transform: scale(0.98); } 100% { transform: scale(1); } }
+    .login-success { animation: loginSuccess 0.3s ease; background: #059669 !important; }
+  </style>
+</head>
+<body class="text-slate-800 bg-slate-50">
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
